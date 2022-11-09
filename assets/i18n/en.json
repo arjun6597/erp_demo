@@ -1,0 +1,31 @@
+{
+    "SIDEBAR": {
+        "GAMES": "Games",
+        "PLAYERS": "Players",
+        "BANNERS": "Banners",
+        "DASHBOARD": "Dashboard",
+        "NOTIFICATION": "Notification",
+        "IMAGE_GALLERY": "Image Gallery",
+        "APP_WALKTHROUGH": "App Walkthrough",
+        "SETTINGS": "Settings",
+        "INFORMATIC_CONTENTS": "Informatic Contents",
+        "TRANSACTION_HISTORY": "Transaction History",
+        "LOGOUT": "Log Out"
+    },
+    "PLACEHOLDER": {
+        "LOGIN_NOTE": "Please provide following details to login into the system:",
+        "RESET_PASSWORD_NOTE": "Please provide following details to reset your password",
+        "RESET_PASSWORD_EMAIL_NOTE": "Please provide your email id an email will be sent to your email id along with recovery code if email id exists:",
+        "FORGOT_PASSWORD": "Forgot Password",
+        "LOGIN": "Login",
+        "SUBMIT": "Submit",
+        "BACK_LOGIN": "Back to Login"
+    },
+    "VALIDATION": {
+        "INVALID_EMAIL": "Email should not be empty",
+        "INVALID_FORMET_EMAIL": "Invalid email id",
+        "INVALID_CONFIRM_PASSWORD": "Confirm Password should not be empty",
+        "INVALID_PASSWORD": "Password should not be empty"
+    },
+    "PLACE_HOLDER_PASSWORD": "test"
+}
