@@ -1,0 +1,6 @@
+<app-header *ngIf="enableTheme" (toggleMenuSidebar)="toggleMenuSidebar()"></app-header>
+<app-appsidebar *ngIf="enableTheme"></app-appsidebar>
+<router-outlet></router-outlet>
+<app-appfooter *ngIf="enableTheme"></app-appfooter>
+<ngx-loading [show]="loader" [config]="{ backdropBorderRadius: '4px',fullScreenBackdrop:true }"></ngx-loading>
+<div id="sidebar-overlay" (click)="toggleMenuSidebar()"></div>

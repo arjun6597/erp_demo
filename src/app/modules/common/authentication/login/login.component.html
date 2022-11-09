@@ -1,0 +1,51 @@
+<div class="form-section">
+  <div class="card default-card">
+    <div class="card-body">
+      <h4 class="text-align">
+        {{ 'PLACEHOLDER.LOGIN_NOTE' | translate }}
+      </h4> <br>
+      <form [formGroup]="loginForm" role="form" (ngSubmit)="login()">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Email" formControlName="email" trim>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="loginForm.get('email').errors?.pattern && loginForm.get('email').touched">
+          <div class="error-text">
+            {{ 'VALIDATION.INVALID_FORMET_EMAIL' | translate }}
+          </div>
+        </div>
+        <span *ngIf="loginForm.get('email').invalid && loginForm.get('email').errors.required && loginForm.get('email').touched">
+          <div class="error-text">
+            {{ 'VALIDATION.INVALID_EMAIL' | translate }}
+          </div>
+        </span>
+        <div class="input-group">
+          <input type="password" class="form-control" placeholder="Password" formControlName="password" maxlength="15" trim>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+          <div class="error-text">
+            {{ 'VALIDATION.INVALID_PASSWORD' | translate }}
+          </div>
+        </div>
+        <div style="text-align: end; margin:5px">
+          <a routerLink="/forgot-password">{{ 'PLACEHOLDER.FORGOT_PASSWORD' | translate }}</a>           
+        </div> 
+        <div class ="text-align mb-3">
+          <button type="submit" 
+          [disabled]="loginForm.invalid"  
+          style = "width:30%"
+          class="btn button-custom-enabled" > {{ 'PLACEHOLDER.LOGIN' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

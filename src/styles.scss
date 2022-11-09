@@ -1,0 +1,286 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/icheck-bootstrap/icheck-bootstrap.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "../node_modules/admin-lte/dist/css/adminlte.min.css";
+@import "../node_modules//ionicons/css/ionicons.min.css";
+@import "../node_modules/ngx-toastr/toastr.css";
+@import "../node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css";
+@import "../node_modules/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css";
+@import "../node_modules/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css";
+@import "variable.scss";
+@import "../node_modules/ng2-daterangepicker/assets/daterangepicker.css";
+@font-face {
+    font-family: futureMD;
+    src: url("assets/fonts/FutuMdIt.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: futureMD-Bold;
+    src: url("assets/fonts/FuturaBoldBT.ttf") format("truetype");
+}
+
+.set-font {
+    font-family: futureMD !important;
+}
+
+.button-custom-enabled {
+    background-color: $enabled-button !important;
+    color: $enabled-button-text !important;
+}
+
+.default-font {
+    color: $font !important;
+}
+
+.button-custom-disabled {
+    background-color: $disabled-button !important;
+    color: $disabled-button-text !important;
+}
+
+.custom-switch-on-enabled {
+    .custom-control-label::before {
+        background-color: $enabled-button !important;
+        border-color: $enabled-button !important;
+        color: #fff !important;
+    }
+}
+
+.custom-switch-off-disabled {
+    label.custom-control-label::after {
+        background-color: $disabled-button !important;
+        border-color: $disabled-button !important;
+        color: #fff !important;
+    }
+}
+
+.navbar-dark {
+    background-color: $white !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    background-color: $enabled-button !important;
+}
+
+.card-title {
+    color: $card-title-color !important;
+    font-weight: 1000 !important;
+}
+
+.row-spacing {
+    margin-bottom: 10px;
+    .filter-data {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+.search-text-input {
+    width: 50px;
+}
+
+.content-wrapper {
+    .content {
+        padding: 0 0.5rem;
+        table.table-bordered thead {
+            font-family: CorpoS-Bold;
+        }
+        .actions i {
+            padding: 5px;
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.nav-item {
+    path.a {
+        fill: rgb(194, 199, 208);
+    }
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.ngx-pagination {
+    .current {
+        border: 1px solid !important;
+        background-color: $enabled-button !important;
+        color: $enabled-button-text !important;
+    }
+}
+
+ul.ngx-pagination.ng-star-inserted {
+    padding-inline-start: 0px !important;
+}
+
+.ngx-material-timepicker-content {
+    .ng-tns-c64-1 {
+        --primary-font-family: CorpoS;
+    }
+}
+
+.clock-face {
+    --primary-font-family: CorpoS;
+    --body-background-color: #fff;
+    --button-color: #496e92;
+    --dial-background-color: #496e92;
+    --dial-editable-active-color: #496e92;
+    --clock-hand-color: #496e92;
+}
+
+.timepicker__header {
+    --primary-font-family: CorpoS;
+    background-color: #496e92 !important;
+}
+
+.timepicker__actions {
+    --primary-font-family: CorpoS;
+    --button-color: #496e92;
+}
+
+.owl-dt-calendar-table .owl-dt-calendar-cell-selected {
+    background-color: #00adef !important;
+}
+
+.icheck-primary {
+    input:first-child:checked+label::before {
+        background-color: #00adef !important;
+        border: none;
+    }
+}
+
+.cal-month-view .cal-open-day-events {
+    display: none !important;
+}
+
+.cal-month-view .cal-cell-row .cal-cell:hover {
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Delete icon
+.fa-trash-alt:before {
+    color: red !important;
+}
+
+.timepicker-overlay {
+    z-index: 1052 !important;
+}
+
+.timepicker__header {
+    background-color: #00adef !important;
+}
+
+.clock-face {
+    --button-color: #00adef;
+    --dial-background-color: #00adef;
+    --dial-editable-active-color: #00adef;
+    --clock-hand-color: #00adef;
+}
+
+.no-data {
+    text-align: center !important;
+}
+
+.main-sidebar {
+    position: fixed !important;
+    left: 0 !important;
+}
+
+@media (min-width: 767px) {
+    .sidebar-mini.sidebar-open .main-sidebar {
+        margin-left: 0px !important;
+    }
+    .sidebar-mini .main-sidebar {}
+}
+
+.cal-day-badge {
+    display: none !important;
+}
+
+.error-text {
+    margin: 10px 0px 10px 0px;
+    padding: 7px;
+    border: 0.7px solid #ea5455;
+    color: red !important;
+}
+
+.input-group {
+    margin-bottom: 10px !important;
+}
+
+.text-align {
+    text-align: center !important;
+}
+
+a :hover {
+    color: $font !important;
+}
+
+a {
+    color: black !important;
+}
+
+.form-section {
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.card-body {
+    height: 100%;
+    // width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.default-card {
+    width: 40%;
+    max-width: 80%;
+    box-shadow: none !important;
+    border: 0px !important;
+    min-width: 40%;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(206 125 242) !important;
+}
+
+.login-card-body .input-group .form-control,
+.register-card-body .input-group .form-control {
+    border-right: 0px !important;
+}
+
+.nav-link:hover {
+    color: $enabled-button !important;
+}
+
+.brand-link {
+    text-align: center !important;
+}
+
+.brand-link:hover {
+    color: $white !important;
+}
+
+.content-wrapper {
+    background: $white !important;
+}
