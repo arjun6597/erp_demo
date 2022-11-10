@@ -9,31 +9,34 @@ export const constants = {
           url: '/home',
           image: '',
           icon: 'fa fa-users',
-          name: 'User',
+          name: 'Users',
         },
         {
           id: 2,
-          url: '/help',
+          url: '/company',
           image: '',
-          icon: 'fa fa-question-circle',
-          name: 'Help',
+          icon: 'fa fa-building',
+          name: 'Company',
         },
         {
           id: 3,
-          url: '/reports',
+          url: '/products',
           image: '',
-          icon: 'fa fa-bar-chart',
-          name: 'Report',
+          icon: 'fa fa-cubes',
+          name: 'Products',
         }
     ],
     NAV_ITEMS: [
-      {
-        id: 1,
-        name: 'Change Password'
-      },
       {
         id: 2,
         name: 'Logout'
       }
     ]
 };
+
+
+export const companies = [
+  {id:1,name:'Google', place:"BLR"},
+  {id:2,name:'Meta', place:"HYD"},
+  {id:3,name:'Apple', place: "AHM"},
+]

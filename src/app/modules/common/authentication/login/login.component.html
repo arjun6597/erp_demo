@@ -2,7 +2,7 @@
   <div class="card default-card">
     <div class="card-body">
       <h4 class="text-align">
-        {{ 'PLACEHOLDER.LOGIN_NOTE' | translate }}
+        Please provide following details to login into the system:
       </h4> <br>
       <form [formGroup]="loginForm" role="form" (ngSubmit)="login()">
         <div class="input-group">
@@ -15,12 +15,12 @@
         </div>
         <div *ngIf="loginForm.get('email').errors?.pattern && loginForm.get('email').touched">
           <div class="error-text">
-            {{ 'VALIDATION.INVALID_FORMET_EMAIL' | translate }}
+            Invalid email id
           </div>
         </div>
         <span *ngIf="loginForm.get('email').invalid && loginForm.get('email').errors.required && loginForm.get('email').touched">
           <div class="error-text">
-            {{ 'VALIDATION.INVALID_EMAIL' | translate }}
+            Email should not be empty
           </div>
         </span>
         <div class="input-group">
@@ -33,17 +33,17 @@
         </div>
         <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
           <div class="error-text">
-            {{ 'VALIDATION.INVALID_PASSWORD' | translate }}
+            Password should not be empty
           </div>
         </div>
         <div style="text-align: end; margin:5px">
-          <a routerLink="/forgot-password">{{ 'PLACEHOLDER.FORGOT_PASSWORD' | translate }}</a>           
+          <a routerLink="/forgot-password">Forgot Password</a>           
         </div> 
         <div class ="text-align mb-3">
           <button type="submit" 
           [disabled]="loginForm.invalid"  
           style = "width:30%"
-          class="btn button-custom-enabled" > {{ 'PLACEHOLDER.LOGIN' | translate }}</button>
+          class="btn button-custom-enabled" >Login</button>
         </div>
       </form>
     </div>

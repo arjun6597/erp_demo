@@ -3,13 +3,84 @@
       <div class="container-fluid">
         <div class="row mb-2 header-section">
           <div class="col-sm-6">
-            <h3> This is It</h3>
+            <h3> Users</h3>
           </div>
         </div>
       </div>
     </section>
     <section class="content">
-        This is Section 
+      <button type="button" class="add-company btn btn-default" data-toggle="modal" (click)="resetForm()" data-target="#modal-default">
+        Add Company
+      </button>
+      <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Company</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="companyForm" role="form">
+                <input  class="form-control" placeholder="Name" formControlName="name" >
+                <input  class="form-control" placeholder="Place" formControlName="place" >
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button"  (click)="addCompany()" data-dismiss="modal"  class="btn btn-primary">Add Company</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="company-id">Company Id.</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let company of companyDetail">
+              <td>{{company.id}}</td>
+              <td> {{company.name}}</td>
+              <td> {{company.place}}</td>
+              <td>
+                <i data-toggle="modal" data-target="#modal-update" (click)="editCompany(company.id)" class="fa fa-pencil-square-o" ></i>
+          <i  (click)="deleteCompany(company.id)" class="delete fa fa-trash" (click)="deleteCompany(company.id)"></i> 
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
   
+
+  <div class="modal fade" id="modal-update">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Update Company</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="companyForm" role="form">
+            <input  class="form-control" placeholder="Name" formControlName="name" >
+            <input  class="form-control" placeholder="Place" formControlName="place" >
+            </form>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button"  (click)="updateCompany()" data-dismiss="modal"  class="btn btn-primary">Update Company</button>
+        </div>
+      </div>
+    </div>
+  </div>

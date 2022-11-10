@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ForgotPasswordComponent } from './modules/common/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './modules/common/reset-password/reset-password.component';
+import { CompanyComponent } from './modules/home/company/company.component';
+import { ProductsComponent } from './modules/home/products/products.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,21 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./modules/home/home.module').then (home => home.HomeModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'company',
+    component: CompanyComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'home',
