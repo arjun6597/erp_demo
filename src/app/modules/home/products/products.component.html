@@ -9,7 +9,26 @@
       </div>
     </section>
     <section class="content">
-        <p>products works!</p>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="company-id">Product Id.</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of productDetail">
+              <td>{{product.id}}</td>
+              <td> {{product.name}}</td>
+              <td> {{product.type}}</td>
+              <td> {{product.owner}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
  

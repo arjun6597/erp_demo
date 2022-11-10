@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { usersList } from '@global/constants';
 
 @Component({
   selector: 'app-company',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent implements OnInit {
-
-  constructor() { }
+  userDetail = []
+  constructor() { 
+    this.userDetail = usersList
+  }
 
   ngOnInit(): void {
   }
